@@ -37,22 +37,22 @@ const NFTHeader = () => {
         )}
         <Image
           src="/home/logo.jpg"
-          width={50}
-          height={50}
+          width={60}
+          height={60}
           alt=""
           className="rounded-full border-[#e0d6d2] border-2"
           priority={true}
           onLoad={() => setLoading(false)}
         />
-        {/* {siderWidth > 500 && (
+        {siderWidth > 500 && (
           <Image
-            src="/home/title.png"
+            src="/home/title1.png"
             width={300}
             height={0}
-            className="ml-2 -mt-8"
+            className=""
             alt="title"
           />
-        )} */}
+        )}
       </div>
 
       <SiderList pathname={pathname} siderWidth={siderWidth} />

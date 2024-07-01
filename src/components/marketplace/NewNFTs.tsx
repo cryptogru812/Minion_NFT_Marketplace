@@ -11,7 +11,7 @@ const NewNFTs = ({ item }) => {
   return (
     <>
       <button
-        className={`w-full flex-none relative hover:opacity-70 transition-all duration-100`}
+        className={`w-full flex-none relative hover:border-2 rounded-xl border-[#67ffff] transition-all duration-100`}
         onClick={() => {
           setSelectedNFT(item);
           router.push(`/marketplace/${item.nft_address}`);
