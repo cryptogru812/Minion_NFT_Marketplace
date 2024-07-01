@@ -18,7 +18,7 @@ const Header = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-full h-[130px] border-b-[1px] border-b-[#2A2A2A] pt-5 flex-none mobile:px-[50px] px-[20px] prevent-select ">
+      <div className="w-full border-b-[1px] border-b-[#2A2A2A] py-5 flex-none mobile:px-[50px] px-[20px] prevent-select ">
           <NFTHeader />
       </div>
     </>

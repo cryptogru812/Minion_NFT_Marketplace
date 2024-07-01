@@ -30,7 +30,7 @@ const NFT = () => {
 
   useEffect(() => {
     const admins = [
-      "JBu3HZ6g6YKHG49CMLYupZT3kuu15XqrKoEjrZmhb3jJ",
+      "ERaR6xrZrsY5V2B5urXhWPsYktSDbnTq2UJcrW7zVAhn",
       "4dJ6QHdisXwcFVjADr8dS7BqHfDUfuzc6pzDoTEgGDQi",
       "FhvzCMoiTq8JHZuKwiPsGPgVtQjR8Z4KJ71r55h2tgqC",
       "CBDspbBz3Xy6MYyURfGVzqMg7rS8EsQzBy3hf7UbR7uv",
@@ -131,7 +131,7 @@ const NFT = () => {
                         width={0}
                         height={0}
                         alt=""
-                        src={"/home/logo.jpeg"}
+                        src={"/home/logo.jpg"}
                         className="w-[45px] h-auto rounded-[8px]"
                       />
                       <div className="ml-[20px] text-left">

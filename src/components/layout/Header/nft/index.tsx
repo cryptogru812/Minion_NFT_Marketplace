@@ -33,18 +33,18 @@ const NFTHeader = () => {
     <div className="w-full flex items-center justify-between">
       <div className="flex items-center">
         {loading && (
-          <div className="w-full aspect-square  rounded-[10px]"></div>
+          <div className="w-full aspect-square rounded-[10px]"></div>
         )}
         <Image
-          src="/home/logo.jpeg"
+          src="/home/logo.jpg"
           width={50}
-          height={0}
+          height={50}
           alt=""
           className="rounded-full border-[#e0d6d2] border-2"
           priority={true}
           onLoad={() => setLoading(false)}
         />
-        {siderWidth > 500 && (
+        {/* {siderWidth > 500 && (
           <Image
             src="/home/title.png"
             width={300}
@@ -52,7 +52,7 @@ const NFTHeader = () => {
             className="ml-2 -mt-8"
             alt="title"
           />
-        )}
+        )} */}
       </div>
 
       <SiderList pathname={pathname} siderWidth={siderWidth} />
