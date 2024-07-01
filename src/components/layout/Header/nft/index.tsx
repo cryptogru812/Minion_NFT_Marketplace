@@ -46,16 +46,14 @@ const NFTHeader = () => {
         />
         {siderWidth > 500 && (
           <Image
-            src="/home/title1.png"
-            width={300}
+            src="/home/title.png"
+            width={500}
             height={0}
-            className=""
+            className="ml-3 my-4"
             alt="title"
           />
         )}
       </div>
-
-      <SiderList pathname={pathname} siderWidth={siderWidth} />
 
       <div className="items-center">
         <ul className="text-white text-md">

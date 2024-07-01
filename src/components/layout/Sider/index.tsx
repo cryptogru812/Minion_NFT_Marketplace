@@ -9,7 +9,7 @@ import SiderList from "./sider";
 
 const Sider = () => {
   const pathname = usePathname();
-  const [siderWidth, setSiderWidth] = useState<number>(300);
+  const [siderWidth, setSiderWidth] = useState<number>(250);
   const [loading, setLoading] = useState<boolean>(true);
   const [transition, setTransition] = useState<boolean>(true);
 
@@ -22,9 +22,9 @@ const Sider = () => {
   };
 
   const handleOpenSiderBar = () => {
-    setSiderWidth(300);
+    setSiderWidth(250);
     const sidebar = document.querySelector(".resize-current") as HTMLElement;
-    sidebar.style.width = `${300}px`;
+    sidebar.style.width = `${250}px`;
   };
 
   const handleClick = () => {
@@ -58,9 +58,9 @@ const Sider = () => {
       if (!isResizing) return;
 
       const width = (e as MouseEvent).clientX;
-      if (width > 300) {
-        setSiderWidth(300);
-        sidebar.style.width = `${300}px`;
+      if (width > 250) {
+        setSiderWidth(250);
+        sidebar.style.width = `${250}px`;
       } else if (width > 80) {
         setSiderWidth(width);
         sidebar.style.width = `${width}px`;
@@ -83,8 +83,8 @@ const Sider = () => {
   return (
     <>
       <div
-        className={`desktop:flex-none prevent-select desktop:flex hidden justify-center bg-[#171717] h-full relative resize-current w-[300px] overflow-auto ${
-          transition ? "transition-[width] duration-200" : "transition-none"
+        className={`desktop:flex-none prevent-select bg-opacity-60 desktop:flex hidden justify-start bg-[#171717] h-full relative resize-current w-[250px] overflow-auto ${
+          transition ? "transition-[width] duration-250" : "transition-none"
         }`}
       >
         <div
@@ -126,7 +126,7 @@ const Sider = () => {
             className="w-[40px] h-auto scale-x-[-1]"
           />
         </button>
-        <div className="w-[80%] flex flex-col justify-center items-center h-full">
+        <div className="w-full flex flex-col justify-start items-center h-full">
           <div
             className={`mt-[65px]  ${
               siderWidth >= 250
@@ -156,46 +156,6 @@ const Sider = () => {
 
           <SiderList pathname={pathname} siderWidth={siderWidth} />
 
-          <div className="mb-[40px] ">
-            <ul className="text-white text-md">
-              <div className="w-full inline-flex items-center justify-center">
-                <button
-                  className={`${
-                    siderWidth > 250 ? "w-[200px]" : "px-[7px]"
-                  } h-[40px] rounded-full border border-[#535353] inline-flex items-center justify-center font-ttfirs text-[12px] hover:opacity-70 transition-all duration-100`}
-                  onClick={handleClick}
-                >
-                  <Image
-                    src="/icon/phantom.svg"
-                    width={0}
-                    height={0}
-                    alt={"logo"}
-                    priority={true}
-                    className="w-[25px] h-auto"
-                  />
-                  {siderWidth > 250 ? (
-                    <>
-                      <div className="ml-[7px] mr-[7px] text-white">
-                        {connStatus
-                          ? formatAddress(walletID)
-                          : "Connect Wallet"}
-                      </div>
-                      {connStatus && (
-                        <Image
-                          src="/icon/copy.svg"
-                          width={0}
-                          height={0}
-                          alt={"logo"}
-                          priority={true}
-                          className="w-[15px] h-auto"
-                        />
-                      )}
-                    </>
-                  ) : null}
-                </button>
-              </div>
-            </ul>
-          </div>
         </div>
       </div>
     </>
