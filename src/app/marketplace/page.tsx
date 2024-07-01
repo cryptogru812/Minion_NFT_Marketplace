@@ -49,7 +49,7 @@ const Page = () => {
           <p className="text-[25px]">Explore NFTs</p>
           <div className="w-full h-full mt-[20px] relative overflow-auto">
             {nfts.length > 0 ? (
-              <div className="w-full overflow-auto grid grid-cols-4 gap-[30px] absolute">
+              <div className="w-full overflow-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-[30px] absolute">
                 {nfts.map((item, index) => (
                   <div key={index}>
                     <NewNFTS item={item} />
