@@ -93,7 +93,7 @@ const NFT = ({ params: { id } }) => {
                         className="w-[45px] h-auto rounded-[8px]"
                       />
                       <div className="ml-[20px] text-left">
-                        <p>CoqFather</p>
+                        <p>Despicable Minion 4</p>
                       </div>
                     </button>
                   </div>
