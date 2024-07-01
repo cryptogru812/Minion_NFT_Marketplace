@@ -7,13 +7,13 @@ const searchResultItem = () => {
   return (
     <div className="text-white inline-flex justify-between items-center w-full mb-[10px]">
       <div className="inline-flex items-center">
-        <Image
+        {/* <Image
           src="/avatar/2.svg"
           width={0}
           height={0}
           alt=""
           className="w-[45px] h-auto"
-        />
+        /> */}
         <div className="ml-[10px]">
           <p className="text-[13px]">@KitshunaFowyu</p>
           <p className="text-[10px] text-[#4C4C4C] mt-[-2px]">

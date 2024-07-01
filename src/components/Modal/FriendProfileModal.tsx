@@ -44,7 +44,7 @@ const FriendProfileModal = () => {
               </button>
             </div>
             <div className="flex justify-center w-full mt-[20px]">
-              <Image src="/avatar/8.svg" width={0} height={0} alt="" className="w-[80px] h-auto"/>
+              {/* <Image src="/avatar/8.svg" width={0} height={0} alt="" className="w-[80px] h-auto"/> */}
             </div>
             <div className="inline-flex items-center justify-center w-full mt-[10px]">
               <p className="mr-[5px]">Kitshuna Fowyu</p>
@@ -136,7 +136,7 @@ const FriendProfileModal = () => {
                 Groups
               </button>
             </div>
-            <div className="w-full grid grid-cols-3 gap-[10px] mt-[20px]">
+            {/* <div className="w-full grid grid-cols-3 gap-[10px] mt-[20px]">
               <img className="w-auto h-auto" src="/avatar/9.svg" />
               <img className="w-auto h-auto" src="/avatar/10.svg" />
               <img className="w-auto h-auto" src="/avatar/11.svg" />
@@ -152,7 +152,7 @@ const FriendProfileModal = () => {
               <img className="w-auto h-auto" src="/avatar/14.svg" />
               <img className="w-auto h-auto" src="/avatar/15.svg" />
               <img className="w-auto h-auto" src="/avatar/16.svg" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

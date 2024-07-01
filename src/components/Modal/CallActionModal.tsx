@@ -64,15 +64,15 @@ const CallActionModal = () => {
     useSettingModal();
   const [call, setCall] = useState<boolean>(false);
   const callings = [
-    { avatar: "/avatar/8.svg", type: "screen", name: "@KitshunaFowyu" },
-    { avatar: "/avatar/8.svg", type: "speaking", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "screen", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "speaking", name: "@KitshunaFowyu" },
   ];
   const callMembers = [
-    { avatar: "/avatar/8.svg", type: "rase_hand", name: "@KitshunaFowyu" },
-    { avatar: "/avatar/8.svg", type: "listening", name: "@KitshunaFowyu" },
-    { avatar: "/avatar/8.svg", type: "listening", name: "@KitshunaFowyu" },
-    { avatar: "/avatar/8.svg", type: "listening", name: "@KitshunaFowyu" },
-    { avatar: "/avatar/8.svg", type: "listening", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "rase_hand", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "listening", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "listening", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "listening", name: "@KitshunaFowyu" },
+    { avatar: "/home/title.png", type: "listening", name: "@KitshunaFowyu" },
   ];
   const pathName = usePathname();
 

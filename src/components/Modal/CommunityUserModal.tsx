@@ -48,9 +48,9 @@ const CommunityUserModal = () => {
               </button>
             </div>
             <div className="w-full h-full overflow-auto">
-              <div className="relative w-full inline-flex justify-center mt-[60px]">
+              {/* <div className="relative w-full inline-flex justify-center mt-[60px]">
                 <Image src="/avatar/7.svg" width={100} height={100} alt="" />
-              </div>
+              </div> */}
               <p className="w-full flex justify-center text-[20px] mt-[10px]">
                 Bronxatory2038
               </p>

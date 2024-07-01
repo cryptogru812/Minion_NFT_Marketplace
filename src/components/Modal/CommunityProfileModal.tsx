@@ -75,13 +75,13 @@ const CommunityProfileModal = () => {
           </div>
           <div className="w-full h-full relative overflow-auto">
             <div className="flex justify-center w-full">
-              <Image
+              {/* <Image
                 src="/avatar/2.svg"
                 width={80}
                 height={80}
                 alt=""
                 className="mt-[30px]"
-              />
+              /> */}
             </div>
             <p className="flex justify-center w-full mt-[20px]">Fernado TOYs</p>
             <p className="flex justify-center w-full text-[10px]">

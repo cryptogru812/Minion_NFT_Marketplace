@@ -10,7 +10,6 @@ import SiderList from "./sider";
 const Sider = () => {
   const pathname = usePathname();
   const [siderWidth, setSiderWidth] = useState<number>(250);
-  const [loading, setLoading] = useState<boolean>(true);
   const [transition, setTransition] = useState<boolean>(true);
 
   const { connStatus, solanaConnect, walletID } = useWallet();
@@ -22,13 +21,18 @@ const Sider = () => {
   };
 
   const handleOpenSiderBar = () => {
-    setSiderWidth(250);
-    const sidebar = document.querySelector(".resize-current") as HTMLElement;
-    sidebar.style.width = `${250}px`;
+    if (window.innerWidth < 768) {
+      setSiderWidth(250);
+      const sidebar = document.querySelector(".resize-current") as HTMLElement;
+      sidebar.style.width = `${100}vw`;
+    } else {
+      setSiderWidth(250);
+      const sidebar = document.querySelector(".resize-current") as HTMLElement;
+      sidebar.style.width = `${250}px`;
+    }
   };
 
   const handleClick = () => {
-    
     if (!connStatus) {
       solanaConnect();
       console.log("connected", connStatus);
@@ -36,6 +40,29 @@ const Sider = () => {
       console.log("Not connected", connStatus);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const sidebar = document.querySelector(".resize-current") as HTMLElement;
+
+      if (window.innerWidth < 768) {
+        setSiderWidth(80);
+        sidebar.style.width = `${80}px`;
+        sidebar.style.position = "fixed";
+        sidebar.style.zIndex = "999";
+      } else {
+        setSiderWidth(250);
+        sidebar.style.width = `${250}px`;
+        sidebar.style.position = "relative";
+        sidebar.style.zIndex = "0";
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handle = document.querySelector(".resize-handle") as HTMLElement;
@@ -80,10 +107,27 @@ const Sider = () => {
       document.removeEventListener("mouseup", () => {});
     };
   }, []);
+
+  useEffect(() => {
+    const sidebar = document.querySelector(".resize-current") as HTMLElement;
+    if (!sidebar) {
+      return;
+    }
+    if (window.innerWidth < 768) {
+      if (siderWidth <= 80) {
+        sidebar.style.backgroundColor = "transparent";
+      } else {
+        sidebar.style.backgroundColor = "#1717177f";
+      }
+    } else {
+      sidebar.style.backgroundColor = "#1717177f";
+    }
+  }, [siderWidth]);
+
   return (
     <>
       <div
-        className={`desktop:flex-none prevent-select bg-opacity-60 desktop:flex hidden justify-start bg-[#171717] h-full relative resize-current w-[250px] overflow-auto ${
+        className={`prevent-select bg-opacity-60 justify-start bg-[#171717] h-full relative resize-current w-[250px] min-w-[80px] overflow-auto ${
           transition ? "transition-[width] duration-250" : "transition-none"
         }`}
       >
@@ -126,36 +170,8 @@ const Sider = () => {
             className="w-[40px] h-auto scale-x-[-1]"
           />
         </button>
-        <div className="w-full flex flex-col justify-start items-center h-full">
-          <div
-            className={`mt-[65px]  ${
-              siderWidth >= 250
-                ? "inline-flex justify-center ml-[20px] mb-[30px]"
-                : `flex justify-center mb-[40px]`
-            }`}
-          >
-            <div
-              className={`h-auto ${
-                siderWidth >= 250 ? "w-[50px]" : "w-[40px]"
-              } text-left`}
-            >
-              {loading && (
-                <div className="w-full aspect-square  rounded-[10px]"></div>
-              )}
-              <Image
-                src="/chicken/logo.png"
-                width={150}
-                height={0}
-                alt=""
-                className="rounded-full"
-                priority={true}
-                onLoad={() => setLoading(false)}
-              />
-            </div>
-          </div>
-
+        <div className="w-full flex flex-col justify-start mt-[15vh] items-center h-full">
           <SiderList pathname={pathname} siderWidth={siderWidth} />
-
         </div>
       </div>
     </>
