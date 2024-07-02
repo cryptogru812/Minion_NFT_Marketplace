@@ -86,7 +86,7 @@ const NFT = ({ params: { id } }) => {
                         width={0}
                         height={0}
                         alt=""
-                        src={"/home/logo.jpg"}
+                        src={"/home/logo.png"}
                         className="w-[45px] h-auto rounded-[8px]"
                       />
                       <div className="ml-[20px] text-left">

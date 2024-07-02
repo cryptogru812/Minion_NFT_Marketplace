@@ -36,7 +36,7 @@ const NFTHeader = () => {
           <div className="w-full aspect-square rounded-[10px]"></div>
         )}
         <Image
-          src="/home/logo.jpg"
+          src="/home/logo.png"
           width={60}
           height={60}
           alt=""
@@ -59,7 +59,7 @@ const NFTHeader = () => {
         <ul className="text-white text-md">
           <div className="w-full inline-flex items-center justify-center">
             <button
-              className={`px-5 h-[40px] rounded-full border border-[#535353] inline-flex items-center justify-center font-ttfirs text-[12px] hover:opacity-70 transition-all duration-100`}
+              className={`px-5 h-[40px] rounded-full border border-[#535353] inline-flex items-center justify-center font-triviaGothic text-[12px] hover:opacity-70 transition-all duration-100`}
               onClick={handleClick}
             >
               <Image

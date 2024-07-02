@@ -88,7 +88,7 @@ const NewCommunityModal = () => {
                   Add name here
                 </p>
                 <input
-                  className="w-full border-b border-[#9D9D9D] bg-transparent pt-2 pb-1.5 text-white outline outline-0 placeholder:font-ttfirs focus:border-[#53FAFB] focus:outline-0 placeholder-[#9D9D9D] placeholder:text-[14px]"
+                  className="w-full border-b border-[#9D9D9D] bg-transparent pt-2 pb-1.5 text-white outline outline-0 placeholder:font-triviaGothic focus:border-[#53FAFB] focus:outline-0 placeholder-[#9D9D9D] placeholder:text-[14px]"
                   placeholder="Name is here"
                   onChange={handleName}
                 />
@@ -96,7 +96,7 @@ const NewCommunityModal = () => {
                   The terms and conditions contained in.
                 </p>
                 <input
-                  className="mt-[20px] w-full border-b border-[#9D9D9D] bg-transparent pt-4 pb-1.5 text-white outline outline-0 placeholder:font-ttfirs focus:border-[#53FAFB] focus:outline-0 placeholder-[#9D9D9D] placeholder:text-[14px]"
+                  className="mt-[20px] w-full border-b border-[#9D9D9D] bg-transparent pt-4 pb-1.5 text-white outline outline-0 placeholder:font-triviaGothic focus:border-[#53FAFB] focus:outline-0 placeholder-[#9D9D9D] placeholder:text-[14px]"
                   placeholder="Description is here"
                   onChange={handleDescription}
                 />
@@ -121,7 +121,7 @@ const NewCommunityModal = () => {
                   constitute the entir
                 </p>
                 <div className="w-full flex justify-center mt-[80px]">
-                  <div className="w-[150px] h-[150px] bg-[#222222] rounded-[20px] flex items-center justify-center font-metana text-[50px] text-[#4C4C4C]">
+                  <div className="w-[150px] h-[150px] bg-[#222222] rounded-[20px] flex items-center justify-center font-triviaGothic text-[50px] text-[#4C4C4C]">
                     GW
                   </div>
                 </div>

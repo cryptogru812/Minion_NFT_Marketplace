@@ -12,7 +12,7 @@ const _renderLinkItem = (props: any) => {
     // <li
     //   onClick={() => handleNavigate(props._url)}
     //   className={`relative flex items-center py-3 justify-center font-extrabold
-    //      hover:text-black cursor-pointer text-sm rounded-full font-ttfirs ${
+    //      hover:text-black cursor-pointer text-sm rounded-full font-triviaGothic ${
     //        props._url === "/home" && props._url === props.pathname
     //          ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none px-5"
     //          : props._url !== "/home" && props.pathname.includes(props._url)
@@ -26,7 +26,7 @@ const _renderLinkItem = (props: any) => {
       <li
         onClick={() => handleNavigate(props._url)}
         className={`relative w-full flex items-center py-3 font-extrabold
-         hover:text-black cursor-pointer text-sm rounded-full font-ttfirs ${
+         hover:text-black cursor-pointer text-sm rounded-full font-triviaGothic ${
            props._url === "/home" && props._url === props.pathname
              ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none px-5"
              : props._url !== "/home" && props.pathname.includes(props._url)
