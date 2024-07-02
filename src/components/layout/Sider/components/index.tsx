@@ -14,9 +14,9 @@ const _renderLinkItem = (props: any) => {
     //   className={`relative flex items-center py-3 justify-center font-extrabold
     //      hover:text-black cursor-pointer text-sm rounded-full font-ttfirs ${
     //        props._url === "/home" && props._url === props.pathname
-    //          ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none px-5"
+    //          ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none"
     //          : props._url !== "/home" && props.pathname.includes(props._url)
-    //          ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none px-5"
+    //          ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none"
     //          : "text-white px-5"
     //      }`}
     // >
@@ -25,53 +25,15 @@ const _renderLinkItem = (props: any) => {
     <div className="w-full items-center flex">
       <li
         onClick={() => handleNavigate(props._url)}
-        className={`relative w-full flex items-center py-3 font-extrabold
-         hover:text-black cursor-pointer text-sm rounded-full font-ttfirs ${
+        className={`relative w-full flex items-center px-10 py-3 font-extrabold
+          cursor-pointer text-sm rounded-full font-ttfirs ${
            props._url === "/home" && props._url === props.pathname
-             ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none px-5"
+             ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-white border-none"
              : props._url !== "/home" && props.pathname.includes(props._url)
-             ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-black border-none px-5"
-             : "text-white px-5"
+             ? "bg-gradient-to-t from-[#fa5c13] to-[#faf225] text-white border-none"
+             : "text-white"
          }`}
       >
-        {props._url === "/home" && props._url === props.pathname ? (
-          <div
-            className={`${props.siderWidth > 190 ? `mr-[15px]` : ""} w-[20px]`}
-          >
-            <Image
-              src={props._clickedIcon}
-              height={0}
-              width={0}
-              alt=""
-              className="w-[20px] h-auto"
-            />
-          </div>
-        ) : props._url !== "/home" && props.pathname.includes(props._url) ? (
-          <div
-            className={`${props.siderWidth > 190 ? `mr-[15px]` : ""} w-[20px]`}
-          >
-            <Image
-              src={props._clickedIcon}
-              width={0}
-              height={0}
-              alt=""
-              className="w-[20px] h-auto"
-              priority={true}
-            />
-          </div>
-        ) : (
-          <div
-            className={`${props.siderWidth > 190 ? `mr-[15px]` : ""} w-[18px]`}
-          >
-            <Image
-              src={props._icon}
-              height={0}
-              width={0}
-              alt=""
-              className="w-[18px] h-auto"
-            />
-          </div>
-        )}
         {props.siderWidth > 190 ? (
           <>
             {props._name}

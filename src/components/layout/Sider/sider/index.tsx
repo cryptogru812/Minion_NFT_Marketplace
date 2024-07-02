@@ -47,6 +47,30 @@ const SiderList = (props: any) => {
           pathname={props.pathname}
           siderWidth={props.siderWidth}
         />
+        <ListComponent
+          _name="Website"
+          _icon="/icon/transfer_white.svg"
+          _clickedIcon="/icon/transfer_blue.svg"
+          _url="https://despicable4.meme/"
+          pathname={props.pathname}
+          siderWidth={props.siderWidth}
+        />
+        <ListComponent
+          _name="Telegram"
+          _icon="/icon/transfer_white.svg"
+          _clickedIcon="/icon/transfer_blue.svg"
+          _url="https://t.me/despicable4minions"
+          pathname={props.pathname}
+          siderWidth={props.siderWidth}
+        />
+        <ListComponent
+          _name="- X -"
+          _icon="/icon/transfer_white.svg"
+          _clickedIcon="/icon/transfer_blue.svg"
+          _url="https://x.com/4_despicable"
+          pathname={props.pathname}
+          siderWidth={props.siderWidth}
+        />
       </ul>
     </>
   );
