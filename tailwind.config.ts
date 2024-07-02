@@ -26,7 +26,8 @@ const config: Config = {
         ttfirsBold: "TTFirsBold",
         metanaBold: "MetanaBold",
         abeezeeItalic: "Abeezee_Italic",
-        abeezeeRegular: "Abeezee_Regular"
+        abeezeeRegular: "Abeezee_Regular",
+        triviaGothic: "TriviaGothic"
       },
       screens: {
         desktop: '1000px',

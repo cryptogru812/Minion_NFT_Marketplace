@@ -63,7 +63,7 @@ const Message = (props: any) => {
               </div>
             </div>
 
-            <div className="flex-row ml-[20px] font-ttfirs text-[14px] mt-[8px]">
+            <div className="flex-row ml-[20px] font-triviaGothic text-[14px] mt-[8px]">
               <div className="">
                 {props.item?.who}{" "}
                 <span className="text-[#999999]">

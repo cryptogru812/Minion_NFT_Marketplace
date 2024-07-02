@@ -73,6 +73,10 @@ body {
   font-family: Metana;
   src: url("/neue_metana/NeueMetana-Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: TriviaGothic;
+  src: url("/font/Trivia Gothic/Trivia Gothic R6 Black.otf") format("opentype");
+}
 
 @font-face {
   font-family: TTFirsDemiBold;

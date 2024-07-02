@@ -44,7 +44,7 @@ const NamePhoneNumber = (props: any) => {
         <input
           type="email"
           name="email"
-          className="w-full bg-[#191919] text-[14px] text-white placeholder:font-ttfirs placeholder-[#4C4C4C] outline-none py-[15px] rounded-[15px] pl-[55px]"
+          className="w-full bg-[#191919] text-[14px] text-white placeholder:font-triviaGothic placeholder-[#4C4C4C] outline-none py-[15px] rounded-[15px] pl-[55px]"
           placeholder={`Type your Email`}
           onChange={(e) => {
             handleChange(e);
@@ -57,7 +57,7 @@ const NamePhoneNumber = (props: any) => {
         </div>
         <input
           name="name"
-          className="w-full bg-[#191919] text-[14px] text-white placeholder:font-ttfirs placeholder-[#4C4C4C] outline-none py-[15px] rounded-[15px] pl-[55px]"
+          className="w-full bg-[#191919] text-[14px] text-white placeholder:font-triviaGothic placeholder-[#4C4C4C] outline-none py-[15px] rounded-[15px] pl-[55px]"
           placeholder={`Type your full name`}
           onChange={(e) => {
             handleChange(e);
@@ -83,7 +83,7 @@ const NamePhoneNumber = (props: any) => {
         </div>
       </div>
       <button
-        className="w-full h-[45px] mt-[80px] bg-[#53FAFB] text-black rounded-[12px] font-abeezeeItalic text-[14px] hover:bg-opacity-[70%] transition-all duration-100"
+        className="w-full h-[45px] mt-[80px] bg-[#53FAFB] text-black rounded-[12px] font-triviaGothic text-[14px] hover:bg-opacity-[70%] transition-all duration-100"
         onClick={async () => {
           if (!(await userExisted(user.email)) && allFieldsNotEmpty()) {
             props.handleChangePage(1);
@@ -97,7 +97,7 @@ const NamePhoneNumber = (props: any) => {
         Create account
       </button>
       <button
-        className="w-full inline-flex justify-center mt-[80px] text-[13px] font-ttfirs"
+        className="w-full inline-flex justify-center mt-[80px] text-[13px] font-triviaGothic"
         onClick={() => {
           router.push("/auth/signin");
         }}
