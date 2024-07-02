@@ -7,6 +7,10 @@ const _renderLinkItem = (props: any) => {
   const handleNavigate = (_url: string) => {
     router.push(_url);
   };
+
+  const openLink = (url: string) => {
+    window.open(url, "_blank");
+  }
   // const [loading, setLoading] = useState<boolean>(true);
   return (
     // <li
@@ -24,7 +28,7 @@ const _renderLinkItem = (props: any) => {
     // </li>
     <div className="w-full items-center flex">
       <li
-        onClick={() => handleNavigate(props._url)}
+        onClick={() => props._newURL ? openLink(props._newURL) : handleNavigate(props._url)}
         className={`relative w-full flex items-center px-10 py-3 font-extrabold
          hover:text-black cursor-pointer text-sm rounded-full font-triviaGothic ${
            props._url === "/home" && props._url === props.pathname

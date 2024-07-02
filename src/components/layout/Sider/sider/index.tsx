@@ -52,6 +52,7 @@ const SiderList = (props: any) => {
           _icon="/icon/transfer_white.svg"
           _clickedIcon="/icon/transfer_blue.svg"
           _url="https://despicable4.meme/"
+          _newURL="https://despicable4.meme/"
           pathname={props.pathname}
           siderWidth={props.siderWidth}
         />
@@ -60,6 +61,7 @@ const SiderList = (props: any) => {
           _icon="/icon/transfer_white.svg"
           _clickedIcon="/icon/transfer_blue.svg"
           _url="https://t.me/despicable4minions"
+          _newURL="https://t.me/despicable4minions"
           pathname={props.pathname}
           siderWidth={props.siderWidth}
         />
@@ -68,6 +70,7 @@ const SiderList = (props: any) => {
           _icon="/icon/transfer_white.svg"
           _clickedIcon="/icon/transfer_blue.svg"
           _url="https://x.com/4_despicable"
+          _newURL="https://x.com/4_despicable"
           pathname={props.pathname}
           siderWidth={props.siderWidth}
         />
