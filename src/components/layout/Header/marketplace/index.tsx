@@ -43,7 +43,7 @@ const MarketplaceHeader = () => {
       </div>
       <Image
         src="/home/title.png"
-        width={200}
+        width={100}
         height={0}
         className="mb-2 ml-5"
         alt="title"

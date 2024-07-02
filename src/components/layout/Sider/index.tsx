@@ -170,7 +170,46 @@ const Sider = () => {
             className="w-[40px] h-auto scale-x-[-1]"
           />
         </button>
-        <div className="w-full flex flex-col justify-start mt-[15vh] items-center h-full">
+        <div className="w-full flex flex-col justify-start mt-[10vh] items-center h-full">
+          <div className="items-center">
+            <ul className="text-white text-md">
+              <div className="w-full inline-flex items-center justify-center">
+                <button
+                  className={`px-5 h-[40px] rounded-full border border-[#535353] inline-flex items-center justify-center font-triviaGothic text-[12px] hover:opacity-70 transition-all duration-100`}
+                  onClick={() => handleClick()}
+                >
+                  <Image
+                    src="/icon/phantom.svg"
+                    width={0}
+                    height={0}
+                    alt={"logo"}
+                    priority={true}
+                    className="w-[25px] h-auto"
+                  />
+                  {siderWidth > 200 ? (
+                    <>
+                      <div className="ml-[7px] mr-[7px] text-white">
+                        {connStatus
+                          ? formatAddress(walletID)
+                          : "Connect Wallet"}
+                      </div>
+                      {connStatus && (
+                        <Image
+                          src="/icon/copy.svg"
+                          width={0}
+                          height={0}
+                          alt={"logo"}
+                          priority={true}
+                          className="w-[15px] h-auto"
+                        />
+                      )}
+                    </>
+                  ) : null}
+                </button>
+              </div>
+            </ul>
+          </div>
+          <hr className="w-[90%] mt-3 border-[#535353]" />
           <SiderList pathname={pathname} siderWidth={siderWidth} />
         </div>
       </div>

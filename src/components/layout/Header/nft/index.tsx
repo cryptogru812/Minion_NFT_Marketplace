@@ -14,12 +14,6 @@ const NFTHeader = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [siderWidth, setSiderWidth] = useState<number>(0);
 
-  const handleClick = () => {
-    if (!connStatus) {
-      solanaConnect();
-    }
-  };
-
   useEffect(() => {
     const handleResize = () => {
       setSiderWidth(window.innerWidth);
@@ -47,49 +41,12 @@ const NFTHeader = () => {
         {siderWidth > 500 && (
           <Image
             src="/home/title.png"
-            width={500}
+            width={200}
             height={0}
             className="ml-3 my-4"
             alt="title"
           />
         )}
-      </div>
-
-      <div className="items-center">
-        <ul className="text-white text-md">
-          <div className="w-full inline-flex items-center justify-center">
-            <button
-              className={`px-5 h-[40px] rounded-full border border-[#535353] inline-flex items-center justify-center font-triviaGothic text-[12px] hover:opacity-70 transition-all duration-100`}
-              onClick={handleClick}
-            >
-              <Image
-                src="/icon/phantom.svg"
-                width={0}
-                height={0}
-                alt={"logo"}
-                priority={true}
-                className="w-[25px] h-auto"
-              />
-              {siderWidth > 1600 ? (
-                <>
-                  <div className="ml-[7px] mr-[7px] text-white">
-                    {connStatus ? formatAddress(walletID) : "Connect Wallet"}
-                  </div>
-                  {connStatus && (
-                    <Image
-                      src="/icon/copy.svg"
-                      width={0}
-                      height={0}
-                      alt={"logo"}
-                      priority={true}
-                      className="w-[15px] h-auto"
-                    />
-                  )}
-                </>
-              ) : null}
-            </button>
-          </div>
-        </ul>
       </div>
     </div>
   );
